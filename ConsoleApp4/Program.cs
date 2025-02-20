@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            List<Person> people = new List<Person>();
+            List<Person> people = new List<Person>("1234", "Jason", "Salinas");
+
+            // Replace this with userinput
+            Student student = new Student();
+            people.Add(student);
 
             Student student = new Student();
             student.FirstName = "Jason";
@@ -35,6 +39,26 @@
                 Console.WriteLine($"Hello, {person.FirstName} {person.LastName}");
                 person.Talk();
             }
+
+            PersonUtility.DescribePerson("Hason");
+            PersonUtility.DescribePerson("Jason, Malw");
+            PersonUtility.DescribePerson("Jason, Male, 20");
+
+        }
+
+        static void DescribeAnimal(string name)
+        {
+            Console.WriteLine($"Name: {name}");
+        }
+
+        static void DescribeAnimal(string name, string species)
+        {
+
+        }
+
+        static void DescribeAnimal(string name, string species, int age)
+        {
+
         }
     }
 }
